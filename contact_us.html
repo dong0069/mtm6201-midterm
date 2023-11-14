@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact us</title>
+        <!--Link to specific css styles-->
+        <link href="css/contact_us.css" rel="stylesheet">
+        <!--Link to the font named "Chakra+Petch"-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chakra+Petch:300,400,500,600,700,800">
+    </head>
+    <body>
+        <!--Header section that contains the menu button of openning the sidebar, and the sign up button-->
+        <header role="banner">
+            <button id="menu" onclick="open_menu()"><img src="images/menu.png" alt="Menu"></button>
+            <a href="" id="sign_up"><img src="images/sign_up.png" alt="Sign up"></a>
+        </header>
+        <!--Main Section-->
+        <main role="main">
+            <div class="content_container">
+                <!--Title and greetings-->
+                <h1>Contact us</h1>
+                <p>Got questions or feedback for us? Reach out to us! Use the form below or find our contact info. We value your input and will get back to you promptly. Thanks for choosing SugarHeart Bakery!</p>
+                <!--The form section that can allow users to submit their contact informations and messages-->
+                <div class="form_container" role="form">
+                    <form action="contact_us.html" method="get">
+                        <label for="cname">Name:</label>
+                        <input placeholder="Full Name" id="cname" type="text" name="name">
+                        <label for="cemail">E-mail:</label>
+                        <input placeholder="Email Address" id="cemail" type="text" name="email">
+                        <label for="cmessage">Message:</label>
+                        <textarea placeholder="What would you like to tell us?" id="cmessage" name="message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <!--The navigation menu list-->
+        <div id="menu_list" class="menu_list" role="navigation">
+            <ul>
+                <!--Link that can close the menu list-->
+                <li id="close_button"><a href="" aria-label="Close the navigation">Close</a></li>
+                <!--Link to the home page-->
+                <li><a href="index.html" aria-label="Go to the Home page">Home</a></li>
+                <!--Link to the contact page-->
+                <li><a href="contact_us.html" aria-label="Go to the contact page">Contact</a></li>
+                <!--Link to the products page-->
+                <li><a href="products.html" aria-label="Go to the products page">Product</a></li>
+            </ul>
+        </div>
+        <!--Scripts that can open the navigation menu list-->
+        <script>
+            function open_menu() {
+                document.getElementById("menu_list").style.display="block";
+            }
+        </script>
+        <!--Skip links that can be accessed by TAB-->
+        <ul class="skip-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact_us.html">Contact</a></li>
+            <li><a href="products.html">Product</a></li>
+        </ul>
+    </body>
+</html>

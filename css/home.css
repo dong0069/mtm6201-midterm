@@ -1,0 +1,278 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* main.css */
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+  box-sizing: inherit;
+}
+
+/* Animations */
+@keyframes button_shaking {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(0);
+	}
+	75% {
+		transform: rotate(-10deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@keyframes menu_link {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.2);
+	}
+}
+
+/* CSS for the home page */
+html, body, main {
+	height: 100%;
+}
+
+/* Logo header */
+header {
+	margin: 0 auto;
+	max-width: 1920px;
+	position: relative;
+}
+
+/* The header background img */
+#header_background {
+	width: 100%;
+}
+
+/* The menu button */
+#menu {
+	position: absolute;
+	width: 5%;
+	left: 20px;
+	top: 20px;
+	background: transparent;
+	border: transparent;
+}
+
+#menu img {
+	width: 100%;
+}
+
+/* The center logo */
+#logo_home {
+	position: absolute;
+	width: 34%;
+	left: 33%;
+	top: 25%;
+}
+
+/* The sign up button */
+#sign_up img {
+	position: absolute;
+	width: 10%;
+	top: 10px;
+	right: 10px;
+}
+
+#sign_up img:hover {
+	animation-name: button_shaking;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+}
+
+/* Main Content */
+
+/* Set the maximum width of the main section and center it */
+main {
+	margin: 0 auto;
+	max-width: 1920px;
+	position: relative;
+}
+
+/* The menu list side bar */
+.menu_list {
+	background: #ffe6f7;
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	padding-top: 40px;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.menu_list ul li {
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 40px;
+	text-align: center;
+	padding: 20px 0;
+	width: 80%;
+	border-radius: 30px;
+}
+
+.menu_list ul li:hover {
+	animation-name: menu_link;
+	animation-iteration-count: 1;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.menu_list ul li a {
+	text-decoration: none;
+	color: #a35886;
+	font-family: 'chalkboard', sans-serif;
+	font-size: 36px;
+}
+
+/* The pink background div with corner radius */
+.home_container {
+	margin: 0 auto;
+	margin-top: 80px;
+	width: 85%;
+	height: 100%;
+	background: #f7cfdb;
+	border-radius: 100px 100px 0 0;
+	position: relative;
+}
+
+/* The square content container that can avoid corner radius */
+.content_container {
+	padding: 60px 80px 0 80px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+/* The descroption container that contains the title and the paragraph */
+.description_container {
+	width: 55%;
+}
+
+.description_container img {
+	width: 90%;
+}
+
+.description_container p {
+	font-family: 'chalkboard', sans-serif;
+	color: #a35886;
+	font-size: 26px;
+	line-height: 1.2em;
+	font-weight: 500;
+	padding: 30px 60px 0;
+}
+
+/* The cake container that contains cake img */
+.cake_container {
+	width: 45%;
+}
+
+.cake_container img {
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Footer icons */
+#footer_icons {
+	width: 240px;
+	padding: 20px 0px 0px 15px;
+}
+
+/* CSS for less than 1200px */
+@media screen and (max-width: 1200px) {
+	
+	.content_container {
+		flex-direction: column;
+	}
+	
+	.description_container {
+		width: 100%;
+		margin: 20px;
+	}
+	
+	.cake_container {
+		width: 80%;
+		margin: 20px;
+	}
+	
+}
+
+/* CSS for skip links */
+.skip-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.skip-links a {
+	position: absolute;
+	top: -3em;
+	background-color: purple;
+	color: white;
+	padding: .5em 1em;
+	font-weight: bold;
+}
+
+.skip-links a:focus {
+	top: 0;
+}

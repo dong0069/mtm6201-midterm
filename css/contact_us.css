@@ -1,0 +1,274 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* main.css */
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+  box-sizing: inherit;
+}
+
+/* CSS for contact-us page */
+html {
+	background: #f7cfdb;
+}
+
+/* Animations */
+@keyframes button_shaking {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(0);
+	}
+	75% {
+		transform: rotate(-10deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@keyframes submit_animation {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: rotate(1);
+	}
+}
+
+@keyframes menu_link {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.2);
+	}
+}
+
+header {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/* The menu list side bar */
+.menu_list {
+	background: #ffe6f7;
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	padding-top: 40px;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.menu_list ul li {
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 40px;
+	text-align: center;
+	padding: 20px 0;
+	width: 80%;
+	border-radius: 30px;
+}
+
+.menu_list ul li:hover {
+	animation-name: menu_link;
+	animation-iteration-count: 1;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.menu_list ul li a {
+	text-decoration: none;
+	color: #a35886;
+	font-family: 'chalkboard', sans-serif;
+	font-size: 36px;
+}
+
+/* The menu button */
+#menu {
+	position: absolute;
+	width: 5%;
+	left: 20px;
+	top: 20px;
+	background: transparent;
+	border: transparent;
+}
+
+#menu img {
+	width: 100%;
+}
+
+/* The sign up button */
+#sign_up img {
+	position: absolute;
+	width: 10%;
+	top: 10px;
+	right: 20px;
+}
+
+#sign_up img:hover {
+	animation-name: button_shaking;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+}
+
+/* Main Content */
+
+/* Set the maximum width of the main section and center it */
+main {
+	max-width: 1920px;
+	max-width: 70%;
+	background: white;
+	margin: 0 auto;
+}
+
+
+/* Set the container that contains body contents */
+.content_container {
+	padding: 40px;
+}
+
+.content_container h1 {
+	font-size: 46px;
+	font-family: 'Yuppy SC', sans-serif;
+	line-height: 1.5em;
+}
+
+.content_container p {
+	font-size: 16px;
+	font-family: 'Chakra Petch', sans-serif;
+	line-height: 1.25em;
+}
+
+/* Set the css for the input form */
+.form_container {
+	padding: 20px 0 0;
+	width: 100%;
+}
+
+.form_container label {
+	font-size: 18px;
+	font-family: 'Yuppy SC', sans-serif;
+	line-height: 1.5em;
+	display: block;
+	margin: 10px 0;
+}
+
+.form_container input {
+	width: 70%;
+	height: 30px;
+	display: block;
+	font-size: 18px;
+	font-family: 'Chakra Petch', sans-serif;
+	border: 0.5px solid #808080;
+}
+
+/* The long input area for messages */
+.form_container textarea {
+	resize: none;
+    width: 70%;
+    height: 100px;
+	display: block;
+	font-size: 18px;
+	font-family: 'Chakra Petch', sans-serif;
+	border: 0.5px solid #808080;
+}
+
+.form_container button {
+	font-size: 24px;
+	font-family: 'Yuppy SC', sans-serif;
+    border: 1px solid white;
+	border-radius: 15px;
+    padding: 10px 60px;
+	margin: 20px 0;
+    background: #f7cfdb;
+	color: white;
+}
+
+.form_container button:hover {
+	animation-name: submit_animation;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+}
+
+/* CSS for skip links */
+.skip-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.skip-links a {
+	position: absolute;
+	top: -3em;
+	background-color: purple;
+	color: white;
+	padding: .5em 1em;
+	font-weight: bold;
+}
+
+.skip-links a:focus {
+	top: 0;
+}

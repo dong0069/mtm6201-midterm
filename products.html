@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Products</title>
+        <!--Link to specific css styles-->
+        <link href="css/products.css" rel="stylesheet">
+        <!--Link to the font named "Chakra+Petch"-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chakra+Petch:300,400,500,600,700,800">
+    </head>
+    <body>
+        <!--Header section that contains the menu button of openning the sidebar, the logo, and the sign up button-->
+        <header role="banner">
+            <button id="menu" onclick="open_menu()"><img src="images/menu.png" alt="Menu"></button>
+            <img src="images/logo_products.png" id="logo_products" alt="Logo">
+            <a href="" id="sign_up"><img src="images/sign_up.png" alt="Sign up"></a>
+        </header>
+        <!--Main Section-->
+        <main role="main">
+            <h1>Our Products</h1>
+            <!--The section that contains description_container and products_container, is set to flexbox layout-->
+            <div class="content_container">
+                <!--The section that contains the title and articles-->
+                <div class="description_container" role="article">
+                    <h2>Customizing unique cakes just for you!</h2>
+                    <p>At Popcake, we specialize in crafting one-of-a- kind cakes tailored to your preferences and desires. Our expert bakers and designers work tirelessly to bring your vision to life, ensuring each cake is a delicious and personalized masterpiece. Whether it’s a special occasion or simply a treat for yourself, let us create a unique and unforgettable cake experience just for you.</p>
+                </div>
+                <!--The section that contains three pictures, is set to grid layout-->
+                <div class="products_container">
+                    <div id="product_1">
+                        <img 
+                            srcset="images/product_1_320.png 320w,
+                                    images/product_1_640.png 640w,
+                                    images/product_1_1280.png 1280w"
+                            sizes="(max-width: 320px) 320px,
+                                    (max-width: 640px) 640px,
+                                    (max-width: 1280px) 1280px"
+                            src="images/product_1.png"
+                            alt="product-1"
+                        >
+                    </div>
+                    <div id="product_2">
+                        <img 
+                            srcset="images/product_2_320.png 320w,
+                                    images/product_2_640.png 640w,
+                                    images/product_2_1280.png 1280w"
+                            sizes="(max-width: 320px) 320px,
+                                    (max-width: 640px) 640px,
+                                    (max-width: 1280px) 1280px"
+                            src="images/product_2.png"
+                            alt="product-2"
+                        >
+                    </div>
+                    <div id="product_3">
+                        <img 
+                            srcset="images/product_3_320.png 320w,
+                                    images/product_3_640.png 640w,
+                                    images/product_3_1280.png 1280w"
+                            sizes="(max-width: 320px) 320px,
+                                    (max-width: 640px) 640px,
+                                    (max-width: 1280px) 1280px"
+                            src="images/product_3.png"
+                            alt="product-3"
+                        >
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <!--The footer section-->
+    <footer>
+        <img src="images/footer_icons.png" alt="Footer icons">
+    </footer>
+    <!--The navigation menu list-->
+    <div id="menu_list" class="menu_list" role="navigation">
+        <ul>
+            <!--Link that can close the menu list-->
+            <li id="close_button"><a href="" aria-label="Close the navigation">Close</a></li>
+            <!--Link to the home page-->
+            <li><a href="index.html" aria-label="Go to the Home page">Home</a></li>
+            <!--Link to the contact page-->
+            <li><a href="contact_us.html" aria-label="Go to the contact page">Contact</a></li>
+            <!--Link to the products page-->
+            <li><a href="products.html" aria-label="Go to the products page">Product</a></li>
+        </ul>
+    </div>
+    <!--Scripts that can open the navigation menu list-->
+    <script>
+        function open_menu() {
+            document.getElementById("menu_list").style.display="block";
+        }
+    </script>
+    <!--Skip links that can be accessed by TAB-->
+    <ul class="skip-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+        <li><a href="products.html">Product</a></li>
+    </ul>
+</html>
